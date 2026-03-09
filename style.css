@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2%;
+    background: #d85cc3;
+    color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    /*flex-direction: column;*/
+    cursor: pointer;
+}
+
+.banner {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("imagens/banner.jpg") center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner h2 {
+    font-size: 48px;
+}
+
+.sobre {
+    padding: 80px 8%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.estrutura {
+    padding: 80px 8%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    margin: 15px;
+}
+
+.card p {
+    margin: 0 15px 20px;
+}
+
+.servicos {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contato {
+    padding: 80px 8%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #d85cc3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    background: #0f0cc9;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp img {
+    width: 40px;
+}
+
+@media(max-width:900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #d85cc3;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+}
