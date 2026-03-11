@@ -61,6 +61,10 @@ nav a {
     justify-content: center;
     text-align: center;
     color: white;
+    background-size: cover;
+    background-attachment: fixed;
+
+
 }
 
 .banner h2 {
